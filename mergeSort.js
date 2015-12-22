@@ -43,6 +43,6 @@ var mergeSort = function (data) {
 };
 
 
-var data = [8, 7, 6, 5, 4, 3, 2, 1];
+var data = [9,8, 7, 6, 5, 4, 3, 2, 1];
 mergeSort(data);
 console.log(data);
