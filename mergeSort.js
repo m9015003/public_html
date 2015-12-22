@@ -3,27 +3,46 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-var selectionSort = function (n) {
-    for (var i = 0; i < n.length; i++){
-        var min = n[i];
-        var minIndex = i;
-        for (var j = i+1; j < n.length; j++) {            
-            if (n[j] < n[i]) {
-                min = n[j];
-                minIndex = j;
-            }
+var merge = function (leftData, rightData) {
+    for (i=0; i<leftData.length + rightData.length; i++) {
+        if (leftData[i] == null) {
+           
+        } else if() {
+            
+        } esle if() {
+            
+        } else {
+            
         }
-        exchange(n, i, minIndex);
     }
 };
 
-var exchange = function (data, i, j) {
-    var tmp = data[i];
-    data[i] = data[j];
-    data[j] = tmp;
+var mergeSort = function (data) {
+    // terminate 
+    var leftData = new array();
+    var rightData = new array();
+    var resultData = new array();
+    if (data.length > 1) {
+        var firstIndex = 0;
+        var lastIndex = data.length - 1;
+        var middleIndex = (firstIndex + lastIndex)/2;
+        for (i = 0; i<= middleIndex; i++) {
+            leftData.push(a[i]);
+        }
+        for (j = middleIndex + 1; j< data.length; j++) {
+            rightData.push(a[j]);
+        }
+        leftData = mergeSort(leftData);
+        rightData = mergeSort(rightData);
+        resultData = merge(leftData, rightData);
+        return resultData;
+    } else {
+        return data;
+    }
+    
 };
 
-var data = [5, 4, 3, 2, 1];
-selectionSort(data);
+
+var data = [7, 6, 5, 4, 3, 2, 1];
+mergeSort(data);
 console.log(data);
